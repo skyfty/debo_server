@@ -1,0 +1,111 @@
+[ 2018-05-29T18:42:00+08:00 ] 127.0.0.1 /index.php/Appapi/pay/create_order
+ERR: Cron:test Runat 2018-05-29 18:42:00 Use 1.554953 s 
+
+[ 2018-05-29T18:42:07+08:00 ] 127.0.0.1 /index.php/Appapi/pay/create_order
+ERR: Cron:test Runat 2018-05-29 18:42:07 Use 1.064457 s 
+
+[ 2018-05-29T18:45:13+08:00 ] 127.0.0.1 /index.php/Appapi/pay/create_order
+ERR: Cron:test Runat 2018-05-29 18:45:13 Use 1.062590 s 
+
+[ 2018-05-29T18:45:19+08:00 ] 127.0.0.1 /index.php/Appapi/pay/create_order
+ERR: Cron:test Runat 2018-05-29 18:45:19 Use 1.046840 s 
+
+[ 2018-05-29T18:45:34+08:00 ] 127.0.0.1 /index.php/Appapi/pay/create_order
+ERR: Cron:test Runat 2018-05-29 18:45:34 Use 1.050461 s 
+
+[ 2018-05-29T18:45:44+08:00 ] 127.0.0.1 /index.php/Appapi/pay/create_order
+ERR: Cron:test Runat 2018-05-29 18:45:44 Use 1.060947 s 
+
+[ 2018-05-29T18:45:59+08:00 ] 127.0.0.1 /index.php/Appapi/pay/create_order
+ERR: Cron:test Runat 2018-05-29 18:45:59 Use 1.077719 s 
+
+[ 2018-05-29T18:46:27+08:00 ] 127.0.0.1 /index.php/Appapi/pay/create_order
+ERR: Cron:test Runat 2018-05-29 18:46:27 Use 1.064826 s 
+
+[ 2018-05-29T18:48:47+08:00 ] 127.0.0.1 /index.php/Appapi/pay/create_order
+ERR: Cron:test Runat 2018-05-29 18:48:47 Use 1.069970 s 
+
+[ 2018-05-29T18:49:03+08:00 ] 127.0.0.1 /index.php/Appapi/pay/create_order/pay_type/2/uid/112/order_price/0.01/indent/2
+ERR: Cron:test Runat 2018-05-29 18:49:03 Use 1.073051 s 
+
+[ 2018-05-29T18:51:10+08:00 ] 127.0.0.1 /index.php/Appapi/pay/create_order/pay_type/2/uid/112/order_price/0.01/indent/2
+ERR: Cron:test Runat 2018-05-29 18:51:10 Use 1.104789 s 
+
+[ 2018-05-29T18:52:42+08:00 ] 127.0.0.1 /index.php/Appapi/pay/create_order/pay_type/2/uid/112/order_price/0.01/indent/2
+ERR: Cron:test Runat 2018-05-29 18:52:42 Use 1.078324 s 
+
+[ 2018-05-29T18:52:52+08:00 ] 127.0.0.1 /index.php/Appapi/pay/create_order/pay_type/2/uid/112/order_price/0.01/indent/2
+ERR: Cron:test Runat 2018-05-29 18:52:52 Use 1.040286 s 
+
+[ 2018-05-29T18:53:22+08:00 ] 127.0.0.1 /index.php/Appapi/pay/create_order/pay_type/2/uid/112/order_price/0.01/indent/2
+ERR: Cron:test Runat 2018-05-29 18:53:22 Use 1.049876 s 
+
+[ 2018-05-29T18:55:09+08:00 ] 127.0.0.1 /index.php/Appapi/pay/create_order/pay_type/2/uid/112/order_price/0.01/indent/2
+ERR: Cron:test Runat 2018-05-29 18:55:09 Use 1.065918 s 
+
+[ 2018-05-29T18:59:49+08:00 ] 127.0.0.1 /index.php/Appapi/pay/create_order/pay_type/2/uid/112/order_price/0.01/indent/2
+ERR: Cron:test Runat 2018-05-29 18:59:49 Use 1.086386 s 
+
+[ 2018-05-29T19:04:18+08:00 ] 127.0.0.1 /index.php/Appapi/pay/create_order/pay_type/2/uid/112/order_price/0.01/indent/2
+ERR: Cron:test Runat 2018-05-29 19:04:18 Use 1.043115 s 
+
+[ 2018-05-29T19:05:59+08:00 ] 127.0.0.1 /index.php/Appapi/pay/create_order/pay_type/2/uid/112/order_price/0.01/indent/2
+ERR: Cron:test Runat 2018-05-29 19:05:59 Use 1.078442 s 
+
+[ 2018-05-29T19:06:05+08:00 ] 127.0.0.1 /index.php/Appapi/pay/create_order/pay_type/2/uid/112/order_price/0.01/indent/2
+ERR: Cron:test Runat 2018-05-29 19:06:05 Use 1.044023 s 
+
+[ 2018-05-29T19:07:07+08:00 ] 127.0.0.1 /index.php/Appapi/pay/create_order/pay_type/2/uid/112/order_price/0.01/indent/2
+ERR: Cron:test Runat 2018-05-29 19:07:07 Use 1.046622 s 
+
+[ 2018-05-29T19:10:08+08:00 ] 127.0.0.1 /index.php/Appapi/pay/create_order/pay_type/2/uid/112/order_price/0.01/indent/2
+ERR: Cron:test Runat 2018-05-29 19:10:08 Use 1.071839 s 
+
+[ 2018-05-29T19:10:17+08:00 ] 127.0.0.1 /index.php/Appapi/pay/create_order/pay_type/2/uid/112/order_price/0.01/indent/2
+ERR: Cron:test Runat 2018-05-29 19:10:17 Use 1.051779 s 
+
+[ 2018-05-29T19:12:35+08:00 ] 127.0.0.1 /index.php/Appapi/pay/create_order/pay_type/2/uid/112/order_price/0.01/indent/2
+ERR: Cron:test Runat 2018-05-29 19:12:35 Use 1.059837 s 
+
+[ 2018-05-29T19:14:01+08:00 ] 127.0.0.1 /index.php/Appapi/pay/create_order/pay_type/2/uid/112/order_price/0.01/indent/2
+ERR: Cron:test Runat 2018-05-29 19:14:01 Use 1.054334 s 
+
+[ 2018-05-29T19:14:28+08:00 ] 127.0.0.1 /index.php/Appapi/pay/create_order/pay_type/2/uid/112/order_price/0.01/indent/2
+ERR: Cron:test Runat 2018-05-29 19:14:28 Use 1.057249 s 
+
+[ 2018-05-29T19:15:17+08:00 ] 127.0.0.1 /index.php/Appapi/pay/create_order/pay_type/2/uid/112/order_price/0.01/indent/2
+ERR: Cron:test Runat 2018-05-29 19:15:17 Use 1.045495 s 
+
+[ 2018-05-29T19:16:17+08:00 ] 127.0.0.1 /index.php/Appapi/pay/create_order/pay_type/2/uid/112/order_price/0.01/indent/2
+ERR: Cron:test Runat 2018-05-29 19:16:17 Use 1.048339 s 
+
+[ 2018-05-29T19:16:52+08:00 ] 127.0.0.1 /index.php/Appapi/pay/create_order/pay_type/2/uid/112/order_price/0.01/indent/2
+ERR: Cron:test Runat 2018-05-29 19:16:52 Use 1.036725 s 
+
+[ 2018-05-29T19:18:48+08:00 ] 127.0.0.1 /index.php/Appapi/pay/create_order/pay_type/2/uid/112/order_price/0.01/indent/2
+ERR: Cron:test Runat 2018-05-29 19:18:48 Use 1.045883 s 
+
+[ 2018-05-29T19:19:17+08:00 ] 127.0.0.1 /index.php/Appapi/pay/create_order/pay_type/2/uid/112/order_price/0.01/indent/2
+ERR: Cron:test Runat 2018-05-29 19:19:17 Use 1.064494 s 
+
+[ 2018-05-29T19:20:54+08:00 ] 127.0.0.1 /index.php/Appapi/pay/create_order/pay_type/2/uid/112/order_price/0.01/indent/2
+ERR: Cron:test Runat 2018-05-29 19:20:54 Use 1.041842 s 
+
+[ 2018-05-29T19:26:34+08:00 ] 127.0.0.1 /index.php/Appapi/pay/create_order/pay_type/2/uid/112/order_price/0.01/indent/2
+ERR: curl出错，错误码:60
+
+[ 2018-05-29T19:26:40+08:00 ] 127.0.0.1 /index.php/Appapi/pay/create_order
+ERR: Cron:test Runat 2018-05-29 19:26:40 Use 1.050018 s 
+
+[ 2018-05-29T19:26:48+08:00 ] 127.0.0.1 /index.php/Appapi/pay/create_order/pay_type/2/uid/112/order_price/0.01/indent/2
+ERR: Cron:test Runat 2018-05-29 19:26:48 Use 1.069715 s 
+
+[ 2018-05-29T19:28:26+08:00 ] 127.0.0.1 /index.php/Appapi/pay/create_order/pay_type/2/uid/112/order_price/0.01/indent/2
+ERR: curl出错，错误码:60
+
+[ 2018-05-29T19:32:16+08:00 ] 127.0.0.1 /index.php/Appapi/pay/create_order/pay_type/2/uid/112/order_price/0.01/indent/2
+ERR: Cron:test Runat 2018-05-29 19:32:16 Use 1.095942 s 
+
+[ 2018-05-29T19:34:18+08:00 ] 127.0.0.1 /index.php/Appapi/pay/create_order/pay_type/2/uid/112/order_price/0.01/indent/2
+ERR: curl出错，错误码:60
+

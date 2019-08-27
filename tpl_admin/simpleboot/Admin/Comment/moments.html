@@ -1,0 +1,63 @@
+<admintpl file="header" />
+</head>
+<body>
+<div class="wrap js-check-wrap">
+    <ul class="nav nav-tabs">
+        <li class="active"><a href="javascript:;">朋友圈评论列表</a></li>
+
+    </ul>
+
+    <form class="well form-search" method="post" action="{:U('Comment/moments')}">
+        请选择评论类型：
+        <select name="comm">
+            <option value="">请选择</option>
+            <volist name="commen" id="v">
+                <option value="{$v.state}"><if condition="$v.state eq 0 ">显示<elseif condition="$v.state eq 1" />不显示</if></option>
+            </volist>
+        </select>
+        关键字：
+        <input type="text" name="content" style="width: 200px;" value="{$formget.keyword|default=''}" placeholder="请输入评论内容...">
+        <input type="submit" class="btn btn-primary" value="搜索" />
+    </form>
+
+
+    <table class="table table-hover table-bordered table-list">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th >评论内容</th>
+            <th >评论用户</th>
+            <th >人脉圈id</th>
+            <th >评论时间</th>
+            <th >回复人用户</th>
+            <th >状态</th>
+            <th>操作</th>
+        </tr>
+        </thead>
+
+        <foreach name="comment" item="vo">
+            <php>$status = array('0'=>显示,'1'=>不显示);</php>
+
+            <tr>
+                <td>{$vo.mc_id}</td>
+                <td>{$vo.mc_content}</td>
+                <td>{$vo.name}</td>
+                <td>{$vo.moments_id}</td>
+                <td>{$vo.comment_time|date='Y-m-d H:i:s',###}</td>
+                <td>{$vo.reply_name}</td>
+                <td>{$status[$vo['state']]}</td>
+                <td>
+                    <a href="{:U('Comment/m_hide',array('mc_id'=>$vo['mc_id']))}">隐藏</a> |
+                    <a href="{:U('Comment/m_show',array('mc_id'=>$vo['mc_id']))}">显示</a> |
+                    <a href="{:U('Comment/m_delete',array('mc_id'=>$vo['mc_id']))}">删除</a>
+                </td>
+            </tr>
+        </foreach>
+
+    </table>
+    <div class="pagination">{$page}</div>
+    </form>
+    <script src="./statics/js/common.js"></script>
+</div>
+</body>
+</html>

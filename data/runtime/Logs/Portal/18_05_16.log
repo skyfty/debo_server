@@ -1,0 +1,9 @@
+[ 2018-05-16T11:32:54+08:00 ] 127.0.0.1 /?XDEBUG_SESSION_START=16229
+ERR: Cron:test Runat 2018-05-16 11:32:54 Use 1.082937 s 
+
+[ 2018-05-16T11:43:33+08:00 ] 127.0.0.1 /
+ERR: Cron:test Runat 2018-05-16 11:43:33 Use 1.051825 s 
+
+[ 2018-05-16T11:43:47+08:00 ] 127.0.0.1 HTTP://debo.shangtongyuntian.com/
+ERR: Cron:test Runat 2018-05-16 11:43:47 Use 1.089951 s 
+

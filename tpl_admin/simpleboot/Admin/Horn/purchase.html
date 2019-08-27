@@ -1,0 +1,36 @@
+<admintpl file="header" />
+</head>
+<body>
+<div class="wrap js-check-wrap">
+    <ul class="nav nav-tabs">
+        <li class="active"><a href="javascript:;">喇叭购买记录</a></li>
+    </ul>
+    <table class="table table-hover table-bordered table-list">
+        <thead>
+        <tr>
+            <th width="70">ID</th>
+            <th>购买用户</th>
+            <th >喇叭id</th>
+            <th >购买个数</th>
+            <th >购买总价</th>
+            <th >购买时间</th>
+        </tr>
+        </thead>
+
+        <foreach name="horn" item="vo">
+            <tr>
+                <td>{$vo.h_id}</td>
+                <td>{$vo.name}</td>
+                <td>{$vo.horn_id}</td>
+                <td>{$vo.pur_num}</td>
+                <td>{$vo.pur_price}</td>
+                <td>{$vo.pur_time|date='Y-m-d H:i:s',###}</td>
+            </tr>
+        </foreach>
+
+    </table>
+    <div class="pagination">{$page}</div>
+    </form>
+</div>
+</body>
+</html>

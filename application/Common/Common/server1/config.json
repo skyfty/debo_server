@@ -1,0 +1,9 @@
+{
+"AccessKeyID" : "LTAIrJBMkiAxCATG",
+"AccessKeySecret" : "2UTsuwoDUpcNgJJdRCYUA66OUw9AMF",
+"RoleArn" : "acs:ram::20751291:role/aliyunosstokengeneratorrole",
+"BucketName" : "",
+"Endpoint" : "",
+"TokenExpireTime" : "900",
+"PolicyFile": "policy/all_policy.txt"
+}

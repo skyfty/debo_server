@@ -1,0 +1,103 @@
+<admintpl file="header" />
+</head>
+<body>
+<div id="block_con" style="display:none;width:;height:auto;background:#ECF0F1;position:absolute;top:20%;left:50%;margin-left:-400px;">
+    <div style="width:100%;height:30px;background:#ECF0F1;"><span id="close_display" style="float:right;font-size:25px;line-height:25px;margin-right:5px;cursor:pointer;">×</span></div>
+    <div id="info_block" style="width:;height:auto;"></div>
+</div>
+<div class="wrap js-check-wrap">
+    <ul class="nav nav-tabs">
+        <li class="active"><a href="javascript:;">反馈订单</a></li>
+
+    </ul>
+
+
+    <table class="table table-hover table-bordered table-list">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th >订单编号</th>
+            <th >交易用户</th>
+            <th >投诉内容</th>
+            <th >投诉时间</th>
+            <th >投诉状态</th>
+            <th >操作</th>
+
+        <!--<th >订单价格</th>
+            <th >支付状态</th>
+            <th >支付方式</th>
+            <th >付款时间</th>
+            <th >付款对象</th>
+            <th >对象id</th>
+            <th >人脉</th>-->
+        </tr>
+        </thead>
+
+        <foreach name="res" item="vo">
+            <php>$states = array('1'=>未支付,'2'=>已支付);</php>
+            <php>$state = array('1'=>支付宝,'2'=>微信,'3'=>本城支付);</php>
+            <php>$stat = array('1'=>充值,'2'=>购买合约人,'3'=>发红包,'4'=>领取红包,'5'=>退款,'6'=>购买小喇叭,'7'=>三方客转入,'8'=>三方客转出,'9'=>提现,'10'=>积分兑换);</php>
+            <tr>
+                <td>{$vo.fb_id}</td>
+                <td>{$vo.order_sn}</td>
+                <td>{$vo.name}</td>
+                <!--<td>{$vo.order_price}</td>
+                <td>{$states[$vo['pay_status']]}</td>
+                <td>{$state[$vo['pay_type']]}</td>
+                <td>{$vo.pay_time|date='Y-m-d H:i:s',###}</td>
+                <td>{$stat[$vo['indent']]}</td>
+                <td>{$vo.object_id}</td>
+                <td>{$vo.con_uid}</td>-->
+                <td>{$vo.content}</td>
+                <td>{$vo.create_time}</td>
+                <td>{$vo.state}</td>
+                <td>
+                <a name="detail_info"  style="cursor:pointer;">详细信息</a>
+                <input type="hidden" name="hid_one" value="{$vo['fb_id']}"></td>
+            </tr>
+        </foreach>
+
+    </table>
+    <div class="pagination">{$page}</div>
+    </form>
+    <script src="./statics/js/common.js"></script>
+    <script>
+    var detail_info = document.getElementsByName("detail_info");
+    var hid_one = document.getElementsByName("hid_one");
+    for(var i=0;i<detail_info.length;i++){
+        detail_info.item(i).index=i;
+        detail_info.item(i).onclick=function(){
+            for(var i=0;i<detail_info.length;i++){
+                detail_info.item(i).style.color = "#1abc9c";
+            }
+            this.style.color = "red";
+            //alert(hid_one.item(this.index).value);
+            var fb_id = hid_one.item(this.index).value;
+           
+            $.ajax({
+                url:"__MODULE__/Transaction/information",
+                data:{fb_id:fb_id},
+                type:"get",
+                success:function(data){
+                    if(data == "no"){
+                        alert("没有查到信息");
+                    }else{
+                        $("#block_con").css("display","block");
+                        $("#info_block").html(data);
+            
+                    }
+                    
+                }
+            });
+        }
+    }
+    
+    $("#close_display").click(function(){
+        $("#block_con").css("display","none");
+    })
+    
+    
+</script>
+</div>
+</body>
+</html>

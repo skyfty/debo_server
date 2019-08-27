@@ -1,0 +1,269 @@
+[ 2018-04-26T18:25:24+08:00 ] 127.0.0.1 /index.php?g=admin
+ERR: Cron:test Runat 2018-04-26 18:25:24 Use 1.076450 s 
+
+[ 2018-04-26T18:25:33+08:00 ] 127.0.0.1 /index.php?g=Admin&m=public&a=dologin
+ERR: Cron:test Runat 2018-04-26 18:25:33 Use 1.068180 s 
+
+[ 2018-04-26T18:25:33+08:00 ] 127.0.0.1 /index.php?g=Admin&m=public&a=dologin
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000409s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001101s ]
+NOTIC: [2048] Declaration of Common\Controller\ApibaseController::page() should be compatible with Common\Controller\AppframeController::page($Total_Size = 1, $Page_Size = 0, $Current_Page = 1, $listRows = 6, $PageParam = '', $PageLink = '', $Static = false) D:\workspace\debo\server\application\Common\Controller\ApibaseController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `de_red_packets` [ RunTime:0.0392s ]
+SQL: SELECT * FROM `de_red_packets` WHERE ( now_num > 0 and is_overtime = 0 ) ORDER BY time desc  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `de_user` [ RunTime:0.0142s ]
+SQL: UPDATE `de_user` SET `coins`=coins+0.00 WHERE ( id = 113 ) [ RunTime:0.0003s ]
+SQL: UPDATE `de_user` SET `coins`=coins+0.00 WHERE ( id = 102 ) [ RunTime:0.0002s ]
+INFO: Run Behavior\CronRunBehavior [ RunTime:1.080241s ]
+INFO: [ app_begin ] --END-- [ RunTime:1.082281s ]
+SQL: SHOW COLUMNS FROM `de_users` [ RunTime:0.0172s ]
+SQL: SELECT * FROM `de_users` WHERE `user_login` = 'admin' LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2018-04-26T18:26:30+08:00 ] 127.0.0.1 /index.php?g=Admin&m=public&a=dologin
+ERR: Cron:test Runat 2018-04-26 18:26:30 Use 1.108557 s 
+
+[ 2018-04-26T18:26:44+08:00 ] 127.0.0.1 /index.php?g=Admin&m=public&a=dologin
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000312s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000927s ]
+NOTIC: [2048] Declaration of Common\Controller\ApibaseController::page() should be compatible with Common\Controller\AppframeController::page($Total_Size = 1, $Page_Size = 0, $Current_Page = 1, $listRows = 6, $PageParam = '', $PageLink = '', $Static = false) D:\workspace\debo\server\application\Common\Controller\ApibaseController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `de_red_packets` [ RunTime:0.0451s ]
+SQL: SELECT * FROM `de_red_packets` WHERE ( now_num > 0 and is_overtime = 0 ) ORDER BY time desc  [ RunTime:0.0011s ]
+SQL: SHOW COLUMNS FROM `de_user` [ RunTime:0.0263s ]
+SQL: UPDATE `de_user` SET `coins`=coins+0.00 WHERE ( id = 113 ) [ RunTime:0.0006s ]
+SQL: UPDATE `de_user` SET `coins`=coins+0.00 WHERE ( id = 102 ) [ RunTime:0.0004s ]
+INFO: Run Behavior\CronRunBehavior [ RunTime:1.130175s ]
+INFO: [ app_begin ] --END-- [ RunTime:1.131937s ]
+
+[ 2018-04-26T18:26:52+08:00 ] 127.0.0.1 /index.php?g=Admin&m=public&a=dologin
+ERR: Cron:test Runat 2018-04-26 18:26:52 Use 1.085520 s 
+
+[ 2018-04-26T18:26:52+08:00 ] 127.0.0.1 /index.php?g=Admin&m=public&a=dologin
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000282s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000878s ]
+NOTIC: [2048] Declaration of Common\Controller\ApibaseController::page() should be compatible with Common\Controller\AppframeController::page($Total_Size = 1, $Page_Size = 0, $Current_Page = 1, $listRows = 6, $PageParam = '', $PageLink = '', $Static = false) D:\workspace\debo\server\application\Common\Controller\ApibaseController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `de_red_packets` [ RunTime:0.0480s ]
+SQL: SELECT * FROM `de_red_packets` WHERE ( now_num > 0 and is_overtime = 0 ) ORDER BY time desc  [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `de_user` [ RunTime:0.0176s ]
+SQL: UPDATE `de_user` SET `coins`=coins+0.00 WHERE ( id = 113 ) [ RunTime:0.0003s ]
+SQL: UPDATE `de_user` SET `coins`=coins+0.00 WHERE ( id = 102 ) [ RunTime:0.0002s ]
+INFO: Run Behavior\CronRunBehavior [ RunTime:1.097956s ]
+INFO: [ app_begin ] --END-- [ RunTime:1.099640s ]
+SQL: SHOW COLUMNS FROM `de_users` [ RunTime:0.0154s ]
+SQL: SELECT * FROM `de_users` WHERE `user_login` = 'admin' LIMIT 1   [ RunTime:0.0005s ]
+
+[ 2018-04-26T18:26:58+08:00 ] 127.0.0.1 /index.php?g=Admin&m=public&a=dologin
+ERR: Cron:test Runat 2018-04-26 18:26:58 Use 1.087163 s 
+
+[ 2018-04-26T18:26:58+08:00 ] 127.0.0.1 /index.php?g=Admin&m=public&a=dologin
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001211s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002393s ]
+NOTIC: [2048] Declaration of Common\Controller\ApibaseController::page() should be compatible with Common\Controller\AppframeController::page($Total_Size = 1, $Page_Size = 0, $Current_Page = 1, $listRows = 6, $PageParam = '', $PageLink = '', $Static = false) D:\workspace\debo\server\application\Common\Controller\ApibaseController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `de_red_packets` [ RunTime:0.0490s ]
+SQL: SELECT * FROM `de_red_packets` WHERE ( now_num > 0 and is_overtime = 0 ) ORDER BY time desc  [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `de_user` [ RunTime:0.0177s ]
+SQL: UPDATE `de_user` SET `coins`=coins+0.00 WHERE ( id = 113 ) [ RunTime:0.0003s ]
+SQL: UPDATE `de_user` SET `coins`=coins+0.00 WHERE ( id = 102 ) [ RunTime:0.0002s ]
+INFO: Run Behavior\CronRunBehavior [ RunTime:1.099989s ]
+INFO: [ app_begin ] --END-- [ RunTime:1.104504s ]
+
+[ 2018-04-26T18:27:02+08:00 ] 127.0.0.1 /index.php?g=Admin&m=public&a=dologin
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000294s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000889s ]
+INFO: Run Behavior\CronRunBehavior [ RunTime:0.000649s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002266s ]
+
+[ 2018-04-26T18:27:04+08:00 ] 127.0.0.1 /index.php?g=Admin&m=public&a=dologin
+ERR: Cron:test Runat 2018-04-26 18:27:04 Use 1.097351 s 
+
+[ 2018-04-26T18:27:04+08:00 ] 127.0.0.1 /index.php?g=Admin&m=public&a=dologin
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000417s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001432s ]
+NOTIC: [2048] Declaration of Common\Controller\ApibaseController::page() should be compatible with Common\Controller\AppframeController::page($Total_Size = 1, $Page_Size = 0, $Current_Page = 1, $listRows = 6, $PageParam = '', $PageLink = '', $Static = false) D:\workspace\debo\server\application\Common\Controller\ApibaseController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `de_red_packets` [ RunTime:0.0420s ]
+SQL: SELECT * FROM `de_red_packets` WHERE ( now_num > 0 and is_overtime = 0 ) ORDER BY time desc  [ RunTime:0.0013s ]
+SQL: SHOW COLUMNS FROM `de_user` [ RunTime:0.0283s ]
+SQL: UPDATE `de_user` SET `coins`=coins+0.00 WHERE ( id = 113 ) [ RunTime:0.0026s ]
+SQL: UPDATE `de_user` SET `coins`=coins+0.00 WHERE ( id = 102 ) [ RunTime:0.0005s ]
+INFO: Run Behavior\CronRunBehavior [ RunTime:1.117223s ]
+INFO: [ app_begin ] --END-- [ RunTime:1.119888s ]
+
+[ 2018-04-26T18:27:13+08:00 ] 127.0.0.1 /index.php?g=admin&m=public&a=login
+ERR: Cron:test Runat 2018-04-26 18:27:13 Use 1.092386 s 
+
+[ 2018-04-26T18:27:28+08:00 ] 127.0.0.1 /index.php?g=Admin&m=public&a=dologin
+ERR: Cron:test Runat 2018-04-26 18:27:28 Use 1.104896 s 
+
+[ 2018-04-26T18:27:28+08:00 ] 127.0.0.1 /index.php?g=Admin&m=public&a=dologin
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000277s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001430s ]
+NOTIC: [2048] Declaration of Common\Controller\ApibaseController::page() should be compatible with Common\Controller\AppframeController::page($Total_Size = 1, $Page_Size = 0, $Current_Page = 1, $listRows = 6, $PageParam = '', $PageLink = '', $Static = false) D:\workspace\debo\server\application\Common\Controller\ApibaseController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `de_red_packets` [ RunTime:0.0533s ]
+SQL: SELECT * FROM `de_red_packets` WHERE ( now_num > 0 and is_overtime = 0 ) ORDER BY time desc  [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `de_user` [ RunTime:0.0204s ]
+SQL: UPDATE `de_user` SET `coins`=coins+0.00 WHERE ( id = 113 ) [ RunTime:0.0003s ]
+SQL: UPDATE `de_user` SET `coins`=coins+0.00 WHERE ( id = 102 ) [ RunTime:0.0002s ]
+INFO: Run Behavior\CronRunBehavior [ RunTime:1.118110s ]
+INFO: [ app_begin ] --END-- [ RunTime:1.120646s ]
+SQL: SHOW COLUMNS FROM `de_users` [ RunTime:0.0149s ]
+SQL: SELECT * FROM `de_users` WHERE `user_login` = 'admin' LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2018-04-26T18:27:51+08:00 ] 127.0.0.1 /index.php?g=admin&m=public&a=login
+ERR: Cron:test Runat 2018-04-26 18:27:51 Use 1.160032 s 
+
+[ 2018-04-26T18:28:50+08:00 ] 127.0.0.1 /index.php?g=Admin&m=public&a=dologin
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000169s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000824s ]
+INFO: Run Behavior\CronRunBehavior [ RunTime:0.000445s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001880s ]
+SQL: SHOW COLUMNS FROM `de_users` [ RunTime:0.0558s ]
+SQL: SELECT * FROM `de_users` WHERE `user_login` = 'admin' LIMIT 1   [ RunTime:0.0004s ]
+
+[ 2018-04-26T18:29:38+08:00 ] 127.0.0.1 /index.php?g=Admin&m=public&a=dologin
+ERR: Cron:test Runat 2018-04-26 18:29:38 Use 1.101574 s 
+
+[ 2018-04-26T18:29:44+08:00 ] 127.0.0.1 /index.php?g=Admin&m=public&a=dologin
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000339s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002294s ]
+NOTIC: [2048] Declaration of Common\Controller\ApibaseController::page() should be compatible with Common\Controller\AppframeController::page($Total_Size = 1, $Page_Size = 0, $Current_Page = 1, $listRows = 6, $PageParam = '', $PageLink = '', $Static = false) D:\workspace\debo\server\application\Common\Controller\ApibaseController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `de_red_packets` [ RunTime:0.0530s ]
+SQL: SELECT * FROM `de_red_packets` WHERE ( now_num > 0 and is_overtime = 0 ) ORDER BY time desc  [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `de_user` [ RunTime:0.0220s ]
+SQL: UPDATE `de_user` SET `coins`=coins+0.00 WHERE ( id = 113 ) [ RunTime:0.0005s ]
+SQL: UPDATE `de_user` SET `coins`=coins+0.00 WHERE ( id = 102 ) [ RunTime:0.0004s ]
+INFO: Run Behavior\CronRunBehavior [ RunTime:1.124593s ]
+INFO: [ app_begin ] --END-- [ RunTime:1.128384s ]
+
+[ 2018-04-26T18:29:51+08:00 ] 127.0.0.1 /index.php?g=Admin&m=public&a=dologin
+ERR: Cron:test Runat 2018-04-26 18:29:51 Use 1.097774 s 
+
+[ 2018-04-26T18:30:07+08:00 ] 127.0.0.1 /index.php?g=Admin&m=public&a=dologin
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000359s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001814s ]
+NOTIC: [2048] Declaration of Common\Controller\ApibaseController::page() should be compatible with Common\Controller\AppframeController::page($Total_Size = 1, $Page_Size = 0, $Current_Page = 1, $listRows = 6, $PageParam = '', $PageLink = '', $Static = false) D:\workspace\debo\server\application\Common\Controller\ApibaseController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `de_red_packets` [ RunTime:0.0488s ]
+SQL: SELECT * FROM `de_red_packets` WHERE ( now_num > 0 and is_overtime = 0 ) ORDER BY time desc  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `de_user` [ RunTime:0.0189s ]
+SQL: UPDATE `de_user` SET `coins`=coins+0.00 WHERE ( id = 113 ) [ RunTime:0.0004s ]
+SQL: UPDATE `de_user` SET `coins`=coins+0.00 WHERE ( id = 102 ) [ RunTime:0.0003s ]
+INFO: Run Behavior\CronRunBehavior [ RunTime:1.118136s ]
+INFO: [ app_begin ] --END-- [ RunTime:1.121329s ]
+SQL: SHOW COLUMNS FROM `de_users` [ RunTime:0.0243s ]
+SQL: SELECT * FROM `de_users` WHERE `user_login` = 'admin' LIMIT 1   [ RunTime:0.0004s ]
+
+[ 2018-04-26T18:30:14+08:00 ] 127.0.0.1 /index.php?g=Admin&m=public&a=dologin
+ERR: Cron:test Runat 2018-04-26 18:30:14 Use 1.104875 s 
+
+[ 2018-04-26T18:30:41+08:00 ] 127.0.0.1 /index.php?g=Admin&m=public&a=dologin
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000277s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001422s ]
+NOTIC: [2048] Declaration of Common\Controller\ApibaseController::page() should be compatible with Common\Controller\AppframeController::page($Total_Size = 1, $Page_Size = 0, $Current_Page = 1, $listRows = 6, $PageParam = '', $PageLink = '', $Static = false) D:\workspace\debo\server\application\Common\Controller\ApibaseController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `de_red_packets` [ RunTime:0.0475s ]
+SQL: SELECT * FROM `de_red_packets` WHERE ( now_num > 0 and is_overtime = 0 ) ORDER BY time desc  [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `de_user` [ RunTime:0.0206s ]
+SQL: UPDATE `de_user` SET `coins`=coins+0.00 WHERE ( id = 113 ) [ RunTime:0.0003s ]
+SQL: UPDATE `de_user` SET `coins`=coins+0.00 WHERE ( id = 102 ) [ RunTime:0.0002s ]
+INFO: Run Behavior\CronRunBehavior [ RunTime:1.119603s ]
+INFO: [ app_begin ] --END-- [ RunTime:1.122154s ]
+SQL: SHOW COLUMNS FROM `de_users` [ RunTime:0.0234s ]
+SQL: SELECT * FROM `de_users` WHERE `user_login` = 'admin' LIMIT 1   [ RunTime:0.0004s ]
+
+[ 2018-04-26T18:31:04+08:00 ] 127.0.0.1 /index.php?g=Admin&m=public&a=dologin
+ERR: Cron:test Runat 2018-04-26 18:31:04 Use 1.100950 s 
+
+[ 2018-04-26T18:31:10+08:00 ] 127.0.0.1 /index.php?g=Admin&m=public&a=dologin
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000172s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000917s ]
+NOTIC: [2048] Declaration of Common\Controller\ApibaseController::page() should be compatible with Common\Controller\AppframeController::page($Total_Size = 1, $Page_Size = 0, $Current_Page = 1, $listRows = 6, $PageParam = '', $PageLink = '', $Static = false) D:\workspace\debo\server\application\Common\Controller\ApibaseController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `de_red_packets` [ RunTime:0.0530s ]
+SQL: SELECT * FROM `de_red_packets` WHERE ( now_num > 0 and is_overtime = 0 ) ORDER BY time desc  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `de_user` [ RunTime:0.0206s ]
+SQL: UPDATE `de_user` SET `coins`=coins+0.00 WHERE ( id = 113 ) [ RunTime:0.0003s ]
+SQL: UPDATE `de_user` SET `coins`=coins+0.00 WHERE ( id = 102 ) [ RunTime:0.0002s ]
+INFO: Run Behavior\CronRunBehavior [ RunTime:1.115320s ]
+INFO: [ app_begin ] --END-- [ RunTime:1.117027s ]
+
+[ 2018-04-26T18:31:17+08:00 ] 127.0.0.1 /index.php?g=Admin&m=public&a=dologin
+ERR: Cron:test Runat 2018-04-26 18:31:17 Use 1.052501 s 
+
+[ 2018-04-26T18:34:28+08:00 ] 127.0.0.1 /index.php?g=Admin&m=public&a=dologin
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000339s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001959s ]
+NOTIC: [2048] Declaration of Common\Controller\ApibaseController::page() should be compatible with Common\Controller\AppframeController::page($Total_Size = 1, $Page_Size = 0, $Current_Page = 1, $listRows = 6, $PageParam = '', $PageLink = '', $Static = false) D:\workspace\debo\server\application\Common\Controller\ApibaseController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `de_red_packets` [ RunTime:0.0220s ]
+SQL: SELECT * FROM `de_red_packets` WHERE ( now_num > 0 and is_overtime = 0 ) ORDER BY time desc  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `de_user` [ RunTime:0.0155s ]
+SQL: UPDATE `de_user` SET `coins`=coins+0.00 WHERE ( id = 113 ) [ RunTime:0.0003s ]
+SQL: UPDATE `de_user` SET `coins`=coins+0.00 WHERE ( id = 102 ) [ RunTime:0.0002s ]
+INFO: Run Behavior\CronRunBehavior [ RunTime:1.067042s ]
+INFO: [ app_begin ] --END-- [ RunTime:1.070321s ]
+SQL: SHOW COLUMNS FROM `de_users` [ RunTime:0.0268s ]
+SQL: SELECT * FROM `de_users` WHERE `user_login` = 'admin' LIMIT 1   [ RunTime:0.0004s ]
+
+[ 2018-04-26T18:34:37+08:00 ] 127.0.0.1 /index.php?g=Admin&m=public&a=dologin
+ERR: Cron:test Runat 2018-04-26 18:34:37 Use 1.094175 s 
+
+[ 2018-04-26T18:34:37+08:00 ] 127.0.0.1 /index.php?g=Admin&m=public&a=dologin
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000533s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002948s ]
+NOTIC: [2048] Declaration of Common\Controller\ApibaseController::page() should be compatible with Common\Controller\AppframeController::page($Total_Size = 1, $Page_Size = 0, $Current_Page = 1, $listRows = 6, $PageParam = '', $PageLink = '', $Static = false) D:\workspace\debo\server\application\Common\Controller\ApibaseController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `de_red_packets` [ RunTime:0.0469s ]
+SQL: SELECT * FROM `de_red_packets` WHERE ( now_num > 0 and is_overtime = 0 ) ORDER BY time desc  [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `de_user` [ RunTime:0.0184s ]
+SQL: UPDATE `de_user` SET `coins`=coins+0.00 WHERE ( id = 113 ) [ RunTime:0.0003s ]
+SQL: UPDATE `de_user` SET `coins`=coins+0.00 WHERE ( id = 102 ) [ RunTime:0.0002s ]
+INFO: Run Behavior\CronRunBehavior [ RunTime:1.108142s ]
+INFO: [ app_begin ] --END-- [ RunTime:1.113010s ]
+
+[ 2018-04-26T18:34:45+08:00 ] 127.0.0.1 /index.php?g=Admin&m=public&a=dologin
+ERR: Cron:test Runat 2018-04-26 18:34:45 Use 1.095271 s 
+
+[ 2018-04-26T18:34:45+08:00 ] 127.0.0.1 /index.php?g=Admin&m=public&a=dologin
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000173s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001168s ]
+NOTIC: [2048] Declaration of Common\Controller\ApibaseController::page() should be compatible with Common\Controller\AppframeController::page($Total_Size = 1, $Page_Size = 0, $Current_Page = 1, $listRows = 6, $PageParam = '', $PageLink = '', $Static = false) D:\workspace\debo\server\application\Common\Controller\ApibaseController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `de_red_packets` [ RunTime:0.0316s ]
+SQL: SELECT * FROM `de_red_packets` WHERE ( now_num > 0 and is_overtime = 0 ) ORDER BY time desc  [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `de_user` [ RunTime:0.0222s ]
+SQL: UPDATE `de_user` SET `coins`=coins+0.00 WHERE ( id = 113 ) [ RunTime:0.0004s ]
+SQL: UPDATE `de_user` SET `coins`=coins+0.00 WHERE ( id = 102 ) [ RunTime:0.0004s ]
+INFO: Run Behavior\CronRunBehavior [ RunTime:1.114340s ]
+INFO: [ app_begin ] --END-- [ RunTime:1.116374s ]
+
+[ 2018-04-26T18:34:53+08:00 ] 127.0.0.1 /index.php?g=Admin&m=public&a=dologin
+ERR: Cron:test Runat 2018-04-26 18:34:53 Use 1.082735 s 
+
+[ 2018-04-26T18:35:00+08:00 ] 127.0.0.1 /index.php?g=Admin&m=public&a=dologin
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000170s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000905s ]
+NOTIC: [2048] Declaration of Common\Controller\ApibaseController::page() should be compatible with Common\Controller\AppframeController::page($Total_Size = 1, $Page_Size = 0, $Current_Page = 1, $listRows = 6, $PageParam = '', $PageLink = '', $Static = false) D:\workspace\debo\server\application\Common\Controller\ApibaseController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `de_red_packets` [ RunTime:0.0485s ]
+SQL: SELECT * FROM `de_red_packets` WHERE ( now_num > 0 and is_overtime = 0 ) ORDER BY time desc  [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `de_user` [ RunTime:0.0191s ]
+SQL: UPDATE `de_user` SET `coins`=coins+0.00 WHERE ( id = 113 ) [ RunTime:0.0003s ]
+SQL: UPDATE `de_user` SET `coins`=coins+0.00 WHERE ( id = 102 ) [ RunTime:0.0002s ]
+INFO: Run Behavior\CronRunBehavior [ RunTime:1.097580s ]
+INFO: [ app_begin ] --END-- [ RunTime:1.099238s ]
+SQL: SHOW COLUMNS FROM `de_users` [ RunTime:0.0182s ]
+SQL: SELECT * FROM `de_users` WHERE `user_login` = 'admin' LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `de_role_user` [ RunTime:0.0270s ]
+SQL: SELECT `role_id` FROM de_role_user a INNER JOIN de_role as b on a.role_id =b.id  WHERE `user_id` = '1' AND `status` = 1  [ RunTime:0.0010s ]
+SQL: UPDATE `de_users` SET `user_login`='admin',`user_pass`='6f5d260191b0e10adc3949ba59abbe56e057f20f883e3a11',`user_nicename`='admin',`user_email`='1776420274@qq.com',`user_url`='',`avatar`=NULL,`sex`='0',`birthday`=NULL,`signature`=NULL,`last_login_ip`='127.0.0.1',`last_login_time`='2018-04-26 18:35:00',`create_time`='2017-06-17 10:22:23',`user_activation_key`='',`user_status`='1',`score`='0',`user_type`='1' WHERE `id` = '1' [ RunTime:0.0005s ]
+
+[ 2018-04-26T18:35:02+08:00 ] 127.0.0.1 /index.php?g=Admin&m=Index&a=index
+ERR: Cron:test Runat 2018-04-26 18:35:02 Use 1.199366 s 
+

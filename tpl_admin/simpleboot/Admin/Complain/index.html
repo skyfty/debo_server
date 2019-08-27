@@ -1,0 +1,58 @@
+<admintpl file="header" />
+</head>
+<body>
+<div class="wrap js-check-wrap">
+    <ul class="nav nav-tabs">
+        <li class="active"><a href="javascript:;">投诉列表</a></li>
+
+    </ul>
+    <form class="well form-search" method="post" action="{:U('complain/index')}">
+        投诉类型:
+        <select name="type">
+            <option value="">请选择</option>
+            <volist name="complaina" id="v">
+                <option value="{$v.circle_type}"><if condition="$v.circle_type eq 1">朋友圈<elseif condition="$v.circle_type eq 2" />人脉圈<elseif condition="$v.circle_type eq 3" />粉丝圈</if></option>
+            </volist>
+        </select>
+        <input value="查询" type="submit" />
+    </form>
+     
+    <table class="table table-hover table-bordered table-list">
+        <thead>
+        <tr>
+            <th width="70">ID</th>
+            <th>发布用户</th>
+            <th>发布内容</th>
+            <th>投诉时间</th>
+            <th>图片</th>
+            <th>投诉分类</th>
+            <th>投诉原因</th>
+            <th>投诉状态</th>
+            <th>操作</th>
+        </tr>
+        </thead>
+
+        <foreach name="complain" item="vo">
+            <php>$status = array('1'=>朋友圈,'2'=>人脉圈,'3'=>粉丝圈);</php>
+            <php>$status1 = array('0'=>未处理,'1'=>已处理);</php>
+            <tr>
+                <td>{$vo.id}</td>
+                <td>{$vo.name}</td>
+                <td>{$vo.contenta}</td>
+                <td>{$vo.time|date='Y-m-d H:i:s',###}</td>
+                <td ><img src="{$vo.images}" style="width: 80px;height: 80px"></td>
+                <td>{$status[$vo['circle_type']]}</td>
+                <td>{$vo.content}</td>
+                <td>{$status1[$vo['state']]}</td>
+                <td><a href="{:U('Complain/delete',array('circle_type'=>$vo['circle_type'],'moments_id' =>$vo['moments_id'],'id'=>$vo['id']))}">删除</a> |
+                    <a href="{:U('Complain/saved',array('id'=>$vo['id']))}">保留</a>
+                </td>
+            </tr>
+        </foreach>
+
+    </table>
+    <div class="pagination">{$page}</div>
+    </form>
+</div>
+</body>
+</html>

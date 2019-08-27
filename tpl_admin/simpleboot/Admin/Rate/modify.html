@@ -1,0 +1,47 @@
+<admintpl file="header" />
+<style type="text/css">
+    .pic-list li {
+        margin-bottom: 5px;
+    }
+</style>
+</head>
+<body>
+<div class="wrap js-check-wrap">
+    <ul class="nav nav-tabs">
+        <li ><a href="{:U('Rate/index')}">利率列表</a></li>
+        <li class="active"><a href="javascript:void(0)" target="_self">修改利率</a></li>
+    </ul>
+    <form action="{:U('Rate/modify')}" method="post" class="form-horizontal js-ajax-forms" enctype="multipart/form-data">
+        <div class="row-fluid">
+            <div class="span9">
+                <table class="table table-bordered">
+                            <input type="hidden" name="r_id" value="{$info.r_id}">
+                    <tr>
+                        <th width="80">利率类型</th>
+                        <td>
+
+                            <input type="text" name="type" value="<if condition='$info.type eq 2'>积分兑换<else />提现利率</if>" readonly="readonly" />
+
+
+                        </td>
+                    </tr>
+
+
+
+                    <tr>
+                        <th width="80">利率</th>
+                        <td>
+                           
+                            <input style="max-height: 100px;" name="rate" value="{$info.rate}">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+        </div>
+        <div class="form-actions">
+            <button class="btn btn-primary js-ajax-submit" type="submit">提交</button>
+            <a class="btn" href="{:U('Rate/index')}">返回</a>
+        </div>
+    </form>
+</div>

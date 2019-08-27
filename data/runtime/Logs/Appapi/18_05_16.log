@@ -1,0 +1,15 @@
+[ 2018-05-16T11:24:22+08:00 ] 127.0.0.1 /index.php/Appapi/user/daily_sign_in?uid=109&year=2018&month=5
+ERR: Cron:test Runat 2018-05-16 11:24:22 Use 1.194760 s 
+
+[ 2018-05-16T11:31:20+08:00 ] 127.0.0.1 /index.php/Appapi/user/daily_sign_in?uid=109&year=2018&month=5
+ERR: Cron:test Runat 2018-05-16 11:31:20 Use 1.046460 s 
+
+[ 2018-05-16T11:42:56+08:00 ] 127.0.0.1 /index.php/Appapi/user/daily_sign_in?uid=109&year=2018&month=5
+ERR: Cron:test Runat 2018-05-16 11:42:56 Use 1.048967 s 
+
+[ 2018-05-16T11:43:33+08:00 ] 127.0.0.1 /index.php/Appapi/user/daily_sign_in?uid=109&year=2018&month=5
+ERR: Cron:test Runat 2018-05-16 11:43:33 Use 1.046402 s 
+
+[ 2018-05-16T11:44:55+08:00 ] 127.0.0.1 /index.php/Appapi/user/daily_sign_in?uid=109&year=2018&month=5
+ERR: Cron:test Runat 2018-05-16 11:44:55 Use 1.045260 s 
+

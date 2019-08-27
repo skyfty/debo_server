@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<head>
+    <title>Title</title>
+    <style type="text/css">
+        html,body{padding:0; margin:0;}
+        li{list-style: none;}
+        #section{width:95%; padding: 0 2%;}
+        #main{
+            width: 100%; height:400px;
+        }
+        #amount{
+            overflow: hidden;
+            width:98%;
+            padding: 0;
+            border-top: 1px solid #ccc;
+            border-bottom: 1px solid #ccc;
+            display: flex;
+            justify-content: space-between;
+        }
+        #amount li{
+            width:50%;
+            padding: 20px 10px;
+        }
+        #amount li:nth-of-type(2){
+            border-left: 1px solid #ccc;
+        }
+        #amount li span{
+            font-size:20px;
+            line-height: 20px;
+        }
+        #amount li strong{
+            font-weight: normal;
+            color:#ccc;
+            font-size:16px;
+            line-height: 16px;
+        }
+        #progress{
+            width:100%;
+            padding: 0;
+            padding-bottom: 40px;
+            margin: 0;
+        }
+        h4{
+            font-size:18px;
+            line-height: 18px;
+            font-weight: normal;
+        }
+        .progressWarp{
+            width:95%;
+            border-radius: 15px;
+            padding: 7px;
+            border:1px solid #ccc;
+        }
+        .progressBar{
+            float: left;
+            width:80%;
+        }
+        .progressBarText{
+            height: 8px;
+            width:0%;
+            margin-top: 6px;
+            border-radius: 5px;
+        }
+        .progressWarp span{
+            font-size:18px;
+            line-height: 18px;
+            padding-left: 10px;
+        }
+        #progress li{
+            width:95%;
+        }
+        #progress li:nth-of-type(4n+1){
+            color: #f7be47;
+        }
+        #progress li:nth-of-type(4n+1) .progressBarText{
+            background: #f7b834;
+            border:1px solid #f7ad11;
+        }
+        #progress li:nth-of-type(4n+2){
+            color: #51c7f3;
+        }
+        #progress li:nth-of-type(4n+2) .progressBarText{
+            background: #46c4f3;
+            border:1px solid #12b6f3;
+        }
+        #progress li:nth-of-type(4n+3){
+            color: #8f73d0;
+        }
+        #progress li:nth-of-type(4n+3) .progressBarText{
+            background: #8265c4;
+            border:1px solid #714cc5;
+        }
+        #progress li:nth-of-type(4n+4){
+            color: #ff7f81;
+        }
+        #progress li:nth-of-type(4n+4) .progressBarText{
+            background: #8265c4;
+            border:1px solid #714cc5; }
+    </style>
+</head>
+<script src="__ROOT__/public/js/echarts.min.js"></script>
+<body>
+<div id="main"></div>
+<div id="section">
+    <h4>任务进度（待完成）</h4>
+    <ul id="amount">
+        <li>
+            <span>{$total_count}</span><br />
+            <strong>总计</strong>
+        </li>
+        <li>
+            <span>{$all_done}</span><br />
+            <strong>已完成</strong>
+        </li>
+    </ul>
+    <ul id="progress">
+        <volist name="res1" id="vo">
+            <li>
+                <h4>{$vo.name}</h4>
+                <div class="progressWarp">
+                    <div class="progressBar">
+                        <div class="progressBarText" style="width:{$vo.percent}%">
+
+                        </div>
+                    </div>
+                    <span class="progressNumber">
+                    {$vo.percent}%
+					</span>
+                </div>
+            </li>
+        </volist>
+    </ul>
+</div>
+<script type="text/javascript">
+    var myChart;
+    myChart = echarts.init(document.getElementById('main'));
+    res = {$res};
+
+    var option = {
+        tooltip : {
+            trigger: 'item',
+            formatter: "{a} <br/>{b} : {c} ({d}%)"
+        },
+        series : [
+            {
+                name: '备忘录统计',
+                type: 'pie',
+                radius: '75%',
+                roseType: 'angle',
+                itemStyle: {
+                    // 阴影的大小
+                    shadowBlur: 200,
+                    // 阴影水平方向上的偏移
+                    shadowOffsetX: 0,
+                    // 阴影垂直方向上的偏移
+                    shadowOffsetY: 0,
+                    // 阴影颜色
+                    shadowColor: 'rgba(0, 0, 0, 0.5)'
+                },
+
+                animationType: 'scale',
+                animationEasing: 'elasticOut',
+
+
+                data:res
+            }
+        ]
+    }
+    myChart.setOption(option);
+
+</script>
+</body>
+</html>

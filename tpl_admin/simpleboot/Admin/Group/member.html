@@ -1,0 +1,55 @@
+<admintpl file="header" />
+</head>
+<body>
+<div class="wrap js-check-wrap">
+    <ul class="nav nav-tabs">
+        <li class="active"><a href="javascript:;">群组数据表</a></li>
+    </ul>
+    <form class="well form-search" method="post" action="{:U('Group/member')}">
+            请选择成员职务：
+            <select name="type">
+                <option value="">请选择</option>
+                <volist name="type1" id="v">
+                    <option value="{$v.member_type}"><if condition="$v.member_type eq 1 ">群主<elseif condition="$v.member_type eq 2" />管理员<elseif condition="$v.member_type eq 3" />普通群成员</if></option>
+                </volist>
+            </select>
+
+        关键字：
+        <input type="text" name="content" style="width: 200px;" value="{$formget.keyword|default=''}" placeholder="请输入群组id/手机号...">
+        <input type="submit" class="btn btn-primary" value="搜索" />
+    </form>
+
+    <table class="table table-hover table-bordered table-list">
+        <thead>
+        <tr>
+            <th width="70">ID</th>
+            <th >用户名</th>
+            <th>群组ID</th>
+            <th >组员昵称</th>
+            <th >组员手机号</th>
+            <th >是否显示昵称</th>
+            <th >成员职务</th>
+            <th>操作</th>
+        </tr>
+        </thead>
+
+        <foreach name="member" item="vo">
+            <php>$status = array('1'=>群主,'2'=>群管理员,'3'=>普通群成员)</php>
+            <tr>
+                <td>{$vo.cm_id}</td>
+                <td>{$vo.name}</td>
+                <td>{$vo.group_id}</td>
+                <td>{$vo.member_name}</td>
+                <td>{$vo.mobile}</td>
+                <td><if condition="$vo.is_show_name eq 1">显示<elseif condition="$vo.is_show_name eq 2" />不显示</if></td>
+                <td>{$status[$vo['member_type']]}</td>
+                <td><if condition="$vo['member_type'] eq 3"><a href="{:U('Group/m_delete',array('uid'=>$vo['mobile'],'group_id'=>$vo['group_id']))}">踢出该群</a><elseif condition="$vo['member_type'] eq 2" /><a href="{:U('Group/m_manage',array('uid'=>$vo['uid'],'group_id'=>$vo['group_id']))}">解除管理员权限</a><elseif condition="$vo['member_type'] eq 1" /><font color="#FF0000">此用户为群主，无权限操作</font></if></td>
+            </tr>
+        </foreach>
+
+    </table>
+    <div class="pagination">{$page}</div>
+    </form>
+</div>
+</body>
+</html>

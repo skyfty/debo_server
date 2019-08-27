@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+	<div style="width:600px;;height:auto;margin:0px auto;border:1px solid #eee;">
+		<table border="1" cellspacing="0" cellpadding="0" style="margin:0px auto;width:100%;">
+			<tr height="50">
+				<td style="text-align:center;">投诉项目</td>
+				<td style="text-align:center;">{$res.indent}</td>
+			</tr>
+			<tr height="50">
+				<td style="text-align:center;">订单价格</td>
+				<td style="text-align:center;">{$res.order_price}</td>
+			</tr>
+			<tr height="50">
+				<td style="text-align:center;">支付状态</td>
+				<td style="text-align:center;">{$res.pay_status}</td>
+			</tr>
+			<tr height="50">
+				<td style="text-align:center;">支付方式</td>
+				<td style="text-align:center;">{$res.pay_type}</td>
+			</tr>
+			<tr height="50">
+				<td style="text-align:center;">付款时间</td>
+				<td style="text-align:center;">{$res.create_time}</td>
+			</tr>
+			<if condition="$res.indent eq 3">
+			<tr height="50">
+				<td style="text-align:center;">广告id</td>
+				<td style="text-align:center;">{$res.object_id}</td>
+			</tr></if>
+			<if condition="$res.indent eq 6">
+			<tr height="50">
+				<td style="text-align:center;">喇叭id</td>
+				<td style="text-align:center;">{$res.object_id}</td>
+			</tr></if>
+			<if condition="$res.indent eq 2">
+			<tr height="50">
+				<td style="text-align:center;">合约人脉uid</td>
+				<td style="text-align:center;">{$res.con_uid}</td>
+			</tr></if>
+			<if condition="$res.indent eq 7">
+			<tr height="50">
+				<td style="text-align:center;">三方客转入uid</td>
+				<td style="text-align:center;">{$res.con_uid}</td>
+			</tr></if>
+			<if condition="$res.indent eq 8">
+			<tr height="50">
+				<td style="text-align:center;">三方客转出uid</td>
+				<td style="text-align:center;">{$res.con_uid}</td>
+			</tr></if>
+		</table>
+
+	

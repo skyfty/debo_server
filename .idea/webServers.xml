@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="cbdc2d2f-6372-49cc-8d18-2ef892de0ff9" name="debo服务后台" url="http://47.93.219.89">
+        <fileTransfer host="47.93.219.89" port="2124" rootFolder="/public_html" password="dfdddfccdff0df93dffadfcddf9d" username="debo_admin">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

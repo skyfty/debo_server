@@ -1,0 +1,46 @@
+<admintpl file="header" />
+</head>
+<body>
+
+        <form action="{:U('Horn/edit_post')}" method="post" class="form-horizontal js-ajax-forms" enctype="multipart/form-data">
+            <div class="row-fluid">
+                <div class="span">
+                    <table class="table table-bordered">
+<input type="hidden" name="horn_id" value="{$horn.horn_id}">
+                        <tr>
+                            <th width="80">喇叭距离</th>
+                            <td>
+                                <input type="text" style="width: 400px;" name="horn_distance" value="{$horn.horn_distance}" readonly/>
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <th width="80">喇叭价格</th>
+                            <td>
+                                <input type="text" style="width: 400px;" name="horn_price" value="{$horn.horn_price}" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <th width="80">是否免费</th>
+                            <td>
+                                <select name="is_free">
+                                    <?php
+                                    if($horn['is_free'] == 1){
+                                        echo "<option value='1' selected>不免费</option><option value='2' >免费</option>";
+                                        }else if($horn['is_free'] == 2){
+                                            echo "<option value='1'>不免费</option><option value='2' selected>免费</option>";
+                                        }
+                                    ?>
+                                </select>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="form-actions">
+                   <button class="btn btn-primary js-ajax-submit" type="submit">修改</button>
+                <a class="btn" href="{:U('Horn/index')}">返回</a>
+            </div>
+        </form>
+
+</body>

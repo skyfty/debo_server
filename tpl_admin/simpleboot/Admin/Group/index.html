@@ -1,0 +1,43 @@
+<admintpl file="header" />
+</head>
+<body>
+<div class="wrap js-check-wrap">
+    <ul class="nav nav-tabs">
+        <li class="active"><a href="javascript:;">群组数据表</a></li>
+    </ul>
+    <form class="well form-search" method="post" action="{:U('Group/index')}">
+
+        关键字：
+        <input type="text" name="content" style="width: 200px;" value="{$formget.keyword|default=''}" placeholder="请输入群组id/管理员手机号...">
+        <input type="submit" class="btn btn-primary" value="搜索" />
+    </form>
+
+    <table class="table table-hover table-bordered table-list">
+        <thead>
+        <tr>
+            <th width="70">ID</th>
+            <th>群组ID</th>
+            <th >群组头像</th>
+            <th >管理员手机号</th>
+            <th >建群时间</th>
+            <th>操作</th>
+        </tr>
+        </thead>
+
+        <foreach name="group" item="vo">
+            <tr>
+                <td>{$vo.g_id}</td>
+                <td>{$vo.group_id}</td>
+                <td><img src="{$vo.g_avatar}"  style="width: 80px;height: 80px"></td>
+                <td>{$vo.g_mobile}</td>
+                <td>{$vo.create_time|date='Y-m-d H:i:s',###}</td>
+                <td><a href="{:U('Group/delete',array('group_id'=>$vo['group_id']))}">解散群组</a></td>
+            </tr>
+        </foreach>
+
+    </table>
+    <div class="pagination">{$page}</div>
+    </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!Doctype html>
+<html>
+    <head>
+        <title>嘚啵段子</title>
+        <meta charset="utf-8">
+        <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no'/>
+        <script>
+//            window.onload=function(){
+//                var videoBimg = document.getElementById('video_bimg');
+//                videoBimg.addEventListener('play',function(){
+//
+//                });
+//            }
+        </script>
+        <style>
+            /*#poster_img{*/
+                /*width: 100%;*/
+                /*height: 18rem;*/
+                /*position: absolute;*/
+                /*background: transparent no-repeat;*/
+                /*background-size:cover;*/
+            /*}*/
+            *{
+                margin:0px;
+                padding:0px;
+            }
+            html,body{
+                width:100%;
+                height:100%;
+            }
+            .video_bimg{
+                background: url('{$video_cover_url}') no-repeat center;
+                background-size: cover;
+
+            }
+        </style>
+    </head>
+    <body>
+        <div style="width:100%;height:50px;overflow:hidden;">
+            <div style="width:40px;height:40px;border-radius:100%;margin-top:5px;margin-left:6px;float:left;">
+                <img src="{$user_msg.avatar}" style="width:40px;height:40px;border-radius:100%;">
+            </div>
+            <div style="width:100px;height:30px;margin-top:10px;margin-left:6px;float:left;">
+                <div style="width:100px;height:15px;line-height:15px;font-size: 12px;font-family:'微软雅黑';word-break:keep-all;white-space:nowrap;overflow:hidden;">{$user_msg.user_nickname}</div>
+                <div style="width:100px;height:15px;font-size: 10px;color:silver;font-family:'微软雅黑';word-break:keep-all;white-space:nowrap;overflow:hidden;">{$user_msg.debo_code}</div>
+            </div>
+            <a href="http://www.shangtongyuntian.com/dl" style="display:block;width:130px;height:30px;float:right;margin-top:10px;margin-right: 5px;border:1px solid #FF8800;border-radius:15px;">
+                <div style="width:20px;height:20px;margin-top:5px;margin-left:10px;border-radius:5px;float:left;">
+                    <img src="http://debo.shangtongyuntian.com/data/upload/chatroom/small_59c25f4ef10002.55030992.jpg" style="width:20px;height:20px;border-radius:5px;">
+                </div>
+                <div style="width:90px;height:20px;color:#FF8800;margin-top:5px;margin-left:5px;border-radius:5px;float:left;font-size:12px;font-family: '微软雅黑';line-height:20px;"><span>打开嘚啵关注她</span></div>
+            </a>
+        </div>
+        <!--<div id="poster_img"></div>-->
+        <video width="100%" height="100%"  loop controls id="video_bimg" class="video_bimg">
+            <source src="{$play_url}" type="video/mp4" id="curr_video"></source>
+            当前浏览器不支持 video直接播放
+        </video>
+    </body>
+</html>

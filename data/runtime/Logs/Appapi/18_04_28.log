@@ -1,0 +1,54 @@
+[ 2018-04-28T11:17:12+08:00 ] 127.0.0.1 /index.php/Appapi/user/daily_sign_in
+ERR: Cron:test Runat 2018-04-28 11:17:12 Use 1.100304 s 
+
+[ 2018-04-28T11:28:46+08:00 ] 127.0.0.1 /index.php/Appapi/user/daily_sign_in?uid=498&year=2018&month=4
+ERR: Cron:test Runat 2018-04-28 11:28:46 Use 1.099149 s 
+
+[ 2018-04-28T11:33:49+08:00 ] 127.0.0.1 /index.php/Appapi/user/daily_sign_in
+ERR: Cron:test Runat 2018-04-28 11:33:49 Use 1.089088 s 
+
+[ 2018-04-28T11:33:49+08:00 ] 127.0.0.1 /index.php/Appapi
+ERR: 无法加载控制器:Index
+
+[ 2018-04-28T11:39:28+08:00 ] 127.0.0.1 /index.php/Appapi/user/daily_sign_in?uid=498&year=2018&month=4
+ERR: Cron:test Runat 2018-04-28 11:39:28 Use 1.109672 s 
+
+[ 2018-04-28T11:44:22+08:00 ] 127.0.0.1 /index.php/Appapi/user/daily_sign_in
+ERR: Cron:test Runat 2018-04-28 11:44:22 Use 1.083957 s 
+
+[ 2018-04-28T11:45:09+08:00 ] 127.0.0.1 /index.php/Appapi/user/daily_sign_in?uid=498&year=2018&mond=4
+ERR: Cron:test Runat 2018-04-28 11:45:09 Use 1.105991 s 
+
+[ 2018-04-28T11:45:17+08:00 ] 127.0.0.1 /index.php/Appapi/user/daily_sign_in?uid=498&year=2018&month=4
+ERR: Cron:test Runat 2018-04-28 11:45:17 Use 1.090336 s 
+
+[ 2018-04-28T11:45:39+08:00 ] 127.0.0.1 /index.php/Appapi/user/daily_sign_in
+ERR: Cron:test Runat 2018-04-28 11:45:39 Use 1.076577 s 
+
+[ 2018-04-28T11:45:47+08:00 ] 127.0.0.1 /index.php/Appapi/user/daily_sign_in
+ERR: Cron:test Runat 2018-04-28 11:45:47 Use 1.128611 s 
+
+[ 2018-04-28T11:46:01+08:00 ] 127.0.0.1 /index.php/Appapi/user/daily_sign_in?uid=498&year=2018&month=4
+ERR: Cron:test Runat 2018-04-28 11:46:01 Use 1.087851 s 
+
+[ 2018-04-28T11:50:46+08:00 ] 127.0.0.1 /index.php/Appapi/user/daily_sign_in?uid=498&year=2018&month=04
+ERR: Cron:test Runat 2018-04-28 11:50:46 Use 1.110449 s 
+
+[ 2018-04-28T11:51:13+08:00 ] 127.0.0.1 /index.php/Appapi/user/daily_sign_in?uid=498&year=2018&month=04
+ERR: Cron:test Runat 2018-04-28 11:51:13 Use 1.052261 s 
+
+[ 2018-04-28T11:53:59+08:00 ] 127.0.0.1 /index.php/Appapi/user/daily_sign_in?uid=498&year=2018&month=04
+ERR: Cron:test Runat 2018-04-28 11:53:59 Use 1.042648 s 
+
+[ 2018-04-28T11:55:04+08:00 ] 127.0.0.1 /index.php/Appapi/user/daily_sign_in?uid=498&year=2018&month=04
+ERR: Cron:test Runat 2018-04-28 11:55:04 Use 1.050517 s 
+
+[ 2018-04-28T11:55:42+08:00 ] 127.0.0.1 /index.php/Appapi/user/daily_sign_in?uid=498&year=2018&month=04
+ERR: Cron:test Runat 2018-04-28 11:55:42 Use 1.044689 s 
+
+[ 2018-04-28T11:56:34+08:00 ] 127.0.0.1 /index.php/Appapi/user/daily_sign_in?uid=498&year=2018&month=04
+ERR: Cron:test Runat 2018-04-28 11:56:34 Use 1.079171 s 
+
+[ 2018-04-28T11:56:45+08:00 ] 127.0.0.1 /index.php/Appapi/user/daily_sign_in?uid=498&year=2018&month=04
+ERR: Cron:test Runat 2018-04-28 11:56:45 Use 1.105546 s 
+

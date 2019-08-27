@@ -1,0 +1,74 @@
+<admintpl file="header" />
+</head>
+<body>
+<div class="wrap js-check-wrap">
+    <ul class="nav nav-tabs">
+        <li class="active"><a href="javascript:;">广告列表</a></li>
+
+    </ul>
+    <form class="well form-search" method="post" action="{:U('Bribery/cancel')}">
+        请选择广告类型：
+        <select name="adver1">
+            <option value="">请选择</option>
+            <volist name="adver" id="v">
+                <option value="{$v.ad_type}"><if condition="$v.ad_type eq 1 ">碰一碰<elseif condition="$v.ad_type eq 2" />撞一撞<elseif condition="$v.ad_type eq 3" />许愿星<elseif condition="$v.ad_type eq 4" />平台广告</if></option>
+            </volist>
+        </select>
+
+
+        关键字：
+        <input type="text" name="content" style="width: 200px;" value="{$formget.keyword|default=''}" placeholder="请输入广告内容...">
+        <input type="submit" class="btn btn-primary" value="搜索" />
+    </form>
+
+    <table class="table table-hover table-bordered table-list">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th >发布用户</th>
+            <th width="100"style="word-wrap:break-word;word-break:break-all;" >标题</th>
+            <th >广告链接</th>
+            <th width="50">红包金额</th>
+            <th width="50">红包数量</th>
+            <th width="130">发布时间</th>
+            <th >广告内容</th>
+            <th >广告配图</th>
+            <th>类型</th>
+            <th width="50">红包余额</th>
+            <th width="50">剩余红包个数</th>
+            <th width="130">投放时间</th>
+            <th >状态</th>
+            <th>操作</th>
+        </tr>
+        </thead>
+        <foreach name="c_bribery" item="vo">
+            <php>$status = array('1'=>碰一碰,'2'=>撞一撞,'3'=>许愿星,'4'=>平台广告);</php>
+             <php>$status1 = array('0'=>未支付,'1'=>申请审核,'2'=>审核通过,'3'=>撤销申请,'4'=>审核不通过,'5'=>红包撤销通过,'6'=>红包撤销不通过);</php>
+            <tr>
+                <td>{$vo.t_id}</td>
+                <td>{$vo.name}</td>
+                <td>{$vo.title}</td>
+                <td>{$vo.ad_link}</td>
+                <td>{$vo.price}</td>
+                <td>{$vo.p_num}</td>
+                <td>{$vo.p_time|date='Y-m-d H:i:s',###}</td>
+                <td>{$vo.ad_content}</td>
+                <td ><img src="{$vo.images}" style="width: 80px;height: 80px"></td>
+                <td>{$status[$vo['ad_type']]}</td>
+                <td>{$vo.remaining_sum}</td>
+                <td>{$vo.remain_num}</td>
+                <td>{$vo.time_range|date='Y-m-d H:i:s',###}</td>
+                <td>{$status1[$vo['p_status']]}</td>
+                <td>
+                <a href="{:U('Bribery/pass',array('t_id'=>$vo['t_id'],'uid'=>$vo['uid'],'remaining_sum'=>$vo['remaining_sum']))}">通过</a> |  <a href="{:U('Bribery/nopass',array('t_id'=>$vo['t_id']))}">拒绝</a>
+                </td>
+            </tr>
+        </foreach>
+
+    </table>
+    <div class="pagination">{$page}</div>
+    </form>
+    <script src="./statics/js/common.js"></script>
+</div>
+</body>
+</html>

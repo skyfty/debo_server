@@ -1,0 +1,58 @@
+<admintpl file="header" />
+</head>
+<body>
+<div class="wrap js-check-wrap">
+    <ul class="nav nav-tabs">
+        <li class="active"><a href="javascript:;">聊天室列表</a></li>
+
+    </ul>
+    <form class="well form-search" method="post" action="{:U('Chatroom/index')}">
+        关键字：
+        <input type="text" name="content" style="width: 200px;" value="{$formget.keyword|default=''}" placeholder="请输入地区...">
+        <input type="submit" class="btn btn-primary" value="搜索" />
+    </form>
+
+    <table class="table table-hover table-bordered table-list">
+        <thead>
+        <tr>
+            <th width="5%">ID</th>
+            <th width="10%">聊天室ID</th>
+            <th style="word-wrap:break-word;word-break:break-all;" >聊天室名称</th>
+            <th>聊天室头像</th>
+            <th width="100">城市</th>
+            <th width="15%">状态</th>
+            <th width="15%">发布时间</th>
+            <th>操作</th>
+        </tr>
+        </thead>
+
+        <foreach name="res" item="vo">
+            <php>$stat = array('0'=>开启状态,'1'=>关闭状态);</php>
+            <tr>
+                <td>{$vo.id}</td>
+                <td>{$vo.chatroom_id}</td>
+                <td>{$vo.chatroom_name}</td>
+                <td ><img src="{$vo.room_avatar}" style="width: 80px;height: 80px"></td>
+                <td>{$vo.city}</td>
+                <td>{$stat[$vo['status']]}</td>
+                <td>{$vo.time|date='Y-m-d H:i:s',###}</td>
+                <td>
+                    <if condition="$vo.status eq 0">
+                        <a href="{:U('Chatroom/stop',array('chatroom_id'=>$vo['chatroom_id']))}">关闭聊天室</a> ｜
+                        <else />
+                        <a href="{:U('Chatroom/start',array('chatroom_id'=>$vo['chatroom_id']))}">开启聊天室</a> |
+                    </if>
+
+
+                    <a href="{:U('Chatroom/delete',array('chatroom_id'=>$vo['chatroom_id']))}">解散聊天室</a>
+                </td>
+            </tr>
+        </foreach>
+
+    </table>
+    <div class="pagination">{$page}</div>
+    </form>
+    <script src="./statics/js/common.js"></script>
+</div>
+</body>
+</html>

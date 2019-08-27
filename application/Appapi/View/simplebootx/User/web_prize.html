@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+	<link rel="stylesheet" type="text/css" href="__ROOT__/statics/simpleboot/bootstrap/css/bootstrap.min.css"/>
+	<link rel="stylesheet" type="text/css" href="__ROOT__/statics/simpleboot/bootstrap/css/bootstrap-theme.min.css"/>
+	<link rel="stylesheet" type="text/css" href="__ROOT__/statics/simpleboot/bootstrap/css/style.css"/>
+	<title>领取红包</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		body{
+			overflow: hidden;
+		}
+		header{
+			height: 0.7rem;
+		}
+		.container img{
+			width: 100vw;
+		}
+		.text{
+			position: absolute;
+			top: 65%;
+			left: 50%;
+			margin-left: -23%;
+			font-size: 0.16rem;
+			line-height: 0.25rem;
+			color: #666666;
+			text-align: center;
+		}
+		.text span{
+			color: #ff9283;
+		}
+		a{
+			width: 100%;
+			height: 0.3rem;
+			line-height: 0.3rem;
+			background: #fa2d4c;
+			margin-top: 0.3rem;
+			display: inline-block;
+			color: #FFFFFF;
+			border-radius: 5px;
+			text-decoration: none;
+		}
+		@media only screen and (min-width: 320px){
+			.text{
+				top:55%;
+				left: 47%;
+				font-size: 0.14rem;
+			}
+		}
+		@media only screen and (min-width: 360px){
+			.text{
+				left: 48%;
+			}
+		}
+		@media only screen and (min-width: 375px){
+			.text{
+				top:56%;
+				font-size: 0.16rem;
+			}
+		}
+
+		@media only screen and (min-device-width: 375px) and (max-device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
+			.text{
+				top: 46%;
+			}
+		}
+		@media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (-webkit-device-pixel-ratio: 3){
+			.text{
+				top:56%;
+				left: 49%;
+			}
+		}
+
+	</style>
+</head>
+<body>
+<div class="container row">
+	<img src="__ROOT__/statics/images/appApiUser/new_prize.png" >
+	<div class="text">
+		<p>您的好友已经领取五元红包</p>
+		<p>您有 <span>五元</span> 红包待领取</p>
+		<a id="prize">立即领取</a>
+	</div>
+</div>
+</body>
+<script src="__ROOT__/statics/js/jquery.js"></script>
+<script src="__ROOT__/statics/js/ras.js"></script>
+<script src="__ROOT__/statics/js/jsencrypt.min.js"></script>
+<script src="__ROOT__/statics/simpleboot/bootstrap/js/bootstrap.min.js"></script>
+</html>
+<script>
+    $(function(){
+        $("#prize").attr('href',"http://debo.shangtongyuntian.com/index1.php/appapi/User/web_register?invitation_code="+ras_val("{$invitation_code}"))
+    });
+
+
+</script>

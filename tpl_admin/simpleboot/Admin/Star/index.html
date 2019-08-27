@@ -1,0 +1,57 @@
+<admintpl file="header" />
+</head>
+<body>
+<div class="wrap js-check-wrap">
+    <ul class="nav nav-tabs">
+        <li class="active"><a href="javascript:;">许愿星列表</a></li>
+
+    </ul>
+    <form class="well form-search" method="post" action="{:U('Star/index')}">
+        请选择许愿星状态：
+        <select name="star1">
+            <option value="">请选择</option>
+            <volist name="star2" id="v">
+                <option value="{$v.status}"><if condition="$v.status eq 1 ">许愿中<else/>被摘取</if></option>
+            </volist>
+        </select>
+
+
+        关键字：
+        <input type="text" name="content" style="width: 200px;" value="{$formget.keyword|default=''}" placeholder="请输入许愿内容...">
+        <input type="submit" class="btn btn-primary" value="搜索" />
+    </form>
+
+    <table class="table table-hover table-bordered table-list">
+        <thead>
+        <tr>
+            <th width="70">ID</th>
+            <th>发布用户</th>
+            <th >许愿内容</th>
+            <th >发布时间</th>
+            <th>状态</th>
+            <th>摘取用户</th>
+            <th>摘取时间</th>
+            <th>操作</th>
+        </tr>
+        </thead>
+
+        <foreach name="star" item="vo">
+            <php>$status = array('1'=>许愿中,'2'=>被摘取);</php>
+            <tr>
+                <td>{$vo.star_id}</td>
+                <td>{$vo.name}</td>
+                <td>{$vo.wishing_content}</td>
+                <td>{$vo.add_time|date='Y-m-d H:i:s',###}</td>
+                <td>{$status[$vo['status']]}</td>
+                <td>{$vo.user}</td>
+                <td>{$vo.pick_time|date='Y-m-d H:i:s',###}</td>
+                <td><a href="{:U('Star/delete',array('star_id'=>$vo['star_id']))}">删除</a></td>
+            </tr>
+        </foreach>
+
+    </table>
+    <div class="pagination">{$page}</div>
+    </form>
+</div>
+</body>
+</html>

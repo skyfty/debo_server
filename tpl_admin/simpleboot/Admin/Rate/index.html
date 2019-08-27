@@ -1,0 +1,31 @@
+<admintpl file="header" />
+</head>
+<body>
+<div class="wrap js-check-wrap">
+    <ul class="nav nav-tabs">
+        <li class="active"><a href="javascript:;">利率列表</a></li>
+       
+    </ul>
+
+    <table class="table table-hover table-bordered table-list">
+        <thead>
+        <tr>
+            <th width="70">利率ID</th>
+            <th>用户类型</th>
+            <th >利率</th>
+            <th>操作</th>
+        </tr>
+        </thead>
+        <foreach name="res" item="vo">
+            <tr>
+                <td>{$vo.r_id}</td>
+                <td><if condition="$vo.type eq 2">积分兑换<else />提现利率</if></td>
+                <td>{$vo.rate}</td>
+                <td>
+ <a href="{:U('Rate/modify',array('r_id'=>$vo['r_id']))}">利率修改</a>
+                </td>
+            </tr>
+        </foreach>
+    </table>
+    </form>
+</div>

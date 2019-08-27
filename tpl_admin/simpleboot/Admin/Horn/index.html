@@ -1,0 +1,44 @@
+<admintpl file="header" />
+</head>
+<body>
+<div class="wrap js-check-wrap">
+    <ul class="nav nav-tabs">
+        <li class="active"><a href="javascript:;">喇叭数据表</a></li>
+        <li><a href="{:U('Horn/add')}">添加喇叭范围</a></li>
+
+    </ul>
+    <form class="well form-search" method="post" action="{:U('Horn/index')}">
+
+        关键字：
+        <input type="text" name="content" style="width: 200px;" value="{$formget.keyword|default=''}" placeholder="请输入喇叭距离...">
+        <input type="submit" class="btn btn-primary" value="搜索" />
+    </form>
+
+    <table class="table table-hover table-bordered table-list">
+        <thead>
+        <tr>
+            <th width="70">ID</th>
+            <th>喇叭距离</th>
+            <th >喇叭价格</th>
+            <th >是否免费</th>
+            <th>操作</th>
+        </tr>
+        </thead>
+
+        <foreach name="horn" item="vo">
+            <tr>
+                <td>{$vo.horn_id}</td>
+                <td>{$vo.horn_distance}</td>
+                <td>{$vo.horn_price}</td>
+                <td><if condition="$vo.is_free eq 1">不免费<elseif condition="$vo.is_free eq 2" />免费</if></td>
+                <td><a href="{:U('Horn/edit',array('horn_id'=>$vo['horn_id']))}">编辑</a> |
+                    <a href="{:U('Horn/delete',array('horn_id'=>$vo['horn_id']))}">删除</a></td>
+            </tr>
+        </foreach>
+
+    </table>
+    <div class="pagination">{$page}</div>
+    </form>
+</div>
+</body>
+</html>

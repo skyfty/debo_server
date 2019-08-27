@@ -1,0 +1,36 @@
+<admintpl file="header" />
+
+</head>
+<body>
+<div class="wrap js-check-wrap">
+    <ul class="nav nav-tabs">
+        <li ><a href="{:U('Chatroom/index')}">聊天室列表</a></li>
+        <li class="active"><a href="{:U('Chatroom/add')}" target="_self">添加聊天室</a></li>
+    </ul>
+    <form action="{:U('Chatroom/add_post')}" method="post" class="form-horizontal js-ajax-forms" enctype="multipart/form-data">
+        <div class="row-fluid">
+            <div class="span">
+                <table class="table table-bordered">
+                    <tr>
+                        <th width="120">聊天室名称</th>
+                        <td>
+                            <input type="text" style="width: 400px;" name="chatroom_name" value="" placeholder="请输入聊天室名称"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th width="120">城市</th>
+                        <td>
+                            <input type="text" style="width: 400px;" name="city" value="" placeholder="请输入开通城市全称"/>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="form-actions">
+            <button class="btn btn-primary" id='add' type="submit">添加</button>
+            <a class="btn" href="{:U('Chartoom/index')}">返回</a>
+        </div>
+    </form>
+</div>
+</body>
+</html>

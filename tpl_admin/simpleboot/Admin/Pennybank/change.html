@@ -1,0 +1,39 @@
+<admintpl file="header" />
+<style type="text/css">
+    .pic-list li {
+        margin-bottom: 5px;
+    }
+</style>
+</head>
+<body>
+<div class="wrap js-check-wrap">
+    <ul class="nav nav-tabs">
+        <li ><a href="{:U('Pennybank/index')}">用户列表</a></li>
+        <li class="active"><a href="javascript:void(0)" target="_self">修改余额</a></li>
+    </ul>
+    <form action="{:U('Pennybank/change')}" method="post" class="form-horizontal js-ajax-forms" enctype="multipart/form-data">
+        <div class="row-fluid">
+            <div class="span9">
+                <table class="table table-bordered">
+                    <input type="hidden" name="id" value="{$info.id}">
+
+                    <tr>
+                        <th width="80">用户余额</th>
+                        <td>
+
+                            <input style="max-height: 100px;" name="money" value="{$info.money}">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+        </div>
+        <div class="form-actions">
+            <button class="btn btn-primary js-ajax-submit" type="submit">提交</button>
+            <a class="btn" href="{:U('Pennybank/index')}">返回</a>
+        </div>
+
+    </form>
+
+</div>
+</body></html>

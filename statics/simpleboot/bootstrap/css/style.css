@@ -1,0 +1,37 @@
+@charset "utf-8";
+html{ font-size:625%}
+body,p,ul,ol,li,dl,dt,dd,h1,h2,h3,h4,h5,h6,hr,hearder,footer,blockquote,object,iframe,fieldset,input,legend,form,th,td{margin:0;padding:0}
+body,input,textarea,keygen,select,button,isindex{font:0.14rem/1.5 Verdana,Tahoma,"Lucida Grande";color:#333;word-break:break-all;box-sizing: border-box;}
+a{color:#6e6e6e;text-decoration:none;}
+a:hover,a:focus{ outline:none}
+i,b,strong,em,strong{ font-style:normal; font-weight:normal}
+i{display:inline-block;vertical-align:middle}/*i作为图标专用标签*/
+pre{white-space:normal}
+ul,ol,li{list-style:none}
+img{border:none}
+input[type='text']{ height:0.3rem; border:1px solid #ccc; border-radius:3px; padding: 5px 10px;}
+input[type='radio'],input[type='checkbox']{ height: 0.15rem; width: 0.15rem; vertical-align: middle;}
+textarea{border:1px solid #ccc; border-radius: 3px; padding: 5px 10px;resize: none; width: 75%; height: 200px;}
+button{ border:none; background:deepskyblue; height: 0.4rem;border-radius: 3px; color: #fff;}
+button:focus{ outline:none}
+h1{font-size:0.24rem}h2{font-size:0.22rem}h3{font-size:0.2rem}h4{font-size:0.18rem}h5{font-size:0.16rem}h6{font-size:0.14rem}
+table{border-collapse:collapse;border-spacing:0; width:100%; background:#fff}
+td{padding:3px 5px;}
+th{font-weight:normal; background:#e7f4fe; height:40px}
+table,td,th{ border:1px solid #ddd}
+table caption{ font-size:0.16rem; text-align:left; padding-bottom:0.1rem}
+.trOver{background:#f8f5f8}
+.fl{float:left}
+.fr{float:right}
+.clearBoth{clear:both}
+.mc{margin:0 auto}
+.pr{position:relative}
+.pa{position:absolute}
+.tc{text-align:center}
+.tl{text-align:left !important}
+.tr{text-align:right !important}
+.noBorder{border:none 0 !important}
+.noBg{background:none !important}
+.overflow_hide{ overflow:hidden}
+.ellipsis{overflow:hidden;white-space:nowrap;text-overflow:ellipsis; word-wrap: normal}
+

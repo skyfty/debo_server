@@ -1,0 +1,162 @@
+<admintpl file="header" />
+<style type="text/css">
+    .pic-list li {
+        margin-bottom: 5px;
+    }
+</style>
+<script type="text/html" id="photos-item-wrapper">
+    <li id="savedimage{id}">
+        <input id="photo-{id}" type="hidden" name="photos_url[]" value="{filepath}">
+        <img id="photo-{id}-preview" src="{url}" style="height:36px;width: 36px;" onclick="parent.image_preview_dialog(this.src);">
+        <a href="javascript:upload_one_image('图片上传','#photo-{id}');">替换</a>
+        <a href="javascript:(function(){$('#savedimage{id}').remove();})();">移除</a>
+    </li>
+</script>
+<script>
+//    //获取当前访问路径
+//    var url =window.location.href;
+//    //返回 String 对象内第一次出现子字符串的字符位置。
+//      if(url.indexOf('www')>0){
+          var root_url = '/';
+//      }else{
+//          var root_url = '/debo/';
+//      }
+//
+    var GV = {
+ROOT: root_url,
+WEB_ROOT: root_url,
+JS_ROOT: "public/js/",
+APP:'Admin'/*当前应用名*/
+};
+</script>
+</head>
+<body>
+<div class="wrap js-check-wrap">
+    <ul class="nav nav-tabs">
+        <li ><a href="{:U('Advertise/index')}">广告列表</a></li>
+        <li class="active"><a href="{:U('Advertise/add')}" target="_self">广告添加</a></li>
+    </ul>
+    <form action="{:U('Advertise/add_post')}" method="post" class="form-horizontal js-ajax-forms" enctype="multipart/form-data">
+        <div class="row-fluid">
+            <div class="span">
+                <table class="table table-bordered">
+                    <tr>
+                        <th width="120">发布人id</th>
+                        <td>
+                            <input type="text" style="width: 400px;" name="uid" value="" placeholder="请输入发布人uid"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th width="120">广告标题</th>
+                        <td>
+                            <input type="text" style="width: 400px;" name="title" value="" placeholder="请输入广告标题"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th width="120">广告链接</th>
+                        <td>
+                            <input type="text" style="width: 400px;" name="ad_link" value="" placeholder="请输入广告链接"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th width="120">红包金额</th>
+                        <td>
+                            <input type="text" style="width: 400px;" name="title" value="" placeholder="请输入红包金额"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th width="120">红包数量</th>
+                        <td>
+                            <input type="text" style="width: 400px;" name="title" value="" placeholder="请输入红包数量"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>广告内容</th>
+                    <td>
+                            <script type="text/plain" id="content" name="ad_content" required></script>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th width="80">广告图片</th>
+
+                        <td>
+                            <ul id="img" class="pic-list unstyled"></ul>
+                            <a href="javascript:upload_multi_image('图片上传','#photos','photos-item-wrapper');" class="btn btn-small">选择图片</a>
+                        </td>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th>广告类型</th>
+                        <td>
+                            <form class="well form-search" method="get" action="{:U('Advertise/index')}" >
+                                <select name="ad_type">
+                                    <option value="">请选择</option>
+                                    <volist>
+
+                                        <option value="1">碰一碰</option>
+                                        <option value="2">撞一撞</option>
+                                        <option value="3">许愿星</option>
+                                        <option value="4">平台广告</option>
+                                    </volist>
+                                </select>
+                            </form>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>广告开始投放日期</th>
+                        <td><input type="date" name=""></td>
+                    </tr>
+                    <tr>
+                        <th>广告投放截止日期</th>
+                        <td><input type="date" name=""></td>
+                    </tr>
+         </table>
+            </div>
+        </div>
+        <div class="form-actions">
+            <button class="btn btn-primary" id='add' type="submit">{:L('ADD')}</button>
+            <a class="btn" href="{:U('Advertisement/index')}">{:L('BACK')}</a>
+        </div>
+    </form>
+</div>
+<script type="text/javascript" src="__PUBLIC__/js/common.js"></script>
+<script type="text/javascript" src="__PUBLIC__/js/content_addtop.js"></script>
+<script type="text/javascript">
+    //编辑器路径定义
+    var editorURL = GV.DIMAUB;
+</script>
+<script type="text/javascript" src="__PUBLIC__/js/ueditor/ueditor.config.js"></script>
+<script type="text/javascript" src="__PUBLIC__/js/ueditor/ueditor.all.min.js"></script>
+<!-- 	<script type="text/javascript" src="__PUBLIC__/js/content_addtop.js"></script> -->
+<script type="text/javascript">
+    $(function() {
+        $('#add').click(function(){
+            var photo=$('#thumb').val();
+            if(photo == '')
+            {
+                alert('广告位图片不能为空!');
+                return false;
+            }
+        });
+
+        //编辑器
+        editorcontent = new baidu.editor.ui.Editor();
+        editorcontent.render('content');
+        try {
+            editorcontent.sync();
+        } catch (err) {
+        }
+        //增加编辑器验证规则
+        jQuery.validator.addMethod('editorcontent', function() {
+            try {
+                editorcontent.sync();
+            } catch (err) {
+            }
+            return editorcontent.hasContents();
+        });
+    });
+</script>
+</body>
+</html>

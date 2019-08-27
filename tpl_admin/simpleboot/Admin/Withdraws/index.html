@@ -1,0 +1,113 @@
+<admintpl file="header" />
+</head>
+<body>
+<div class="wrap js-check-wrap">
+    <ul class="nav nav-tabs">
+        <li class="active"><a href="javascript:;">提现列表</a></li>
+
+    </ul>
+
+    <form class="well form-search" method="post" action="{:U('Withdraws/index')}">
+        请选择提现状态：
+        <select name="With">
+            <option value="">请选择</option>
+            <volist name="state" id="v">
+                <option value="{$v.state}"><if condition="$v.state eq 0 ">提现中<elseif condition="$v.state eq 1" />提现成功<elseif condition="$v.state eq 3" />提现失败</if></option>
+            </volist>
+        </select>
+        关键字：
+        <input type="text" name="content" style="width: 200px;" value="{$formget.keyword|default=''}" placeholder="请输入单号或uid...">
+        <input type="submit" class="btn btn-primary" value="搜索" />
+    </form>
+
+
+    <table class="table table-hover table-bordered table-list">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th >提现用户</th>
+            <th >申请金额</th>
+            <th >申请时间</th>
+            <th >完成时间</th>
+            <th >订单编号</th>
+            <th >银行卡号</th>
+            <th >开户行</th>
+            <th >利率</th>
+            <th>手续费</th>
+            <th>状态</th>
+            <th>提现失败原因</th>
+            <th>操作</th>
+        </tr>
+        </thead>
+
+        <foreach name="withdraw" item="vo">
+            <php>$states = array('0'=>申请中,'1'=>提现成功,'2'=>'提现失败');</php>
+           <!--  <php>$state = array('1'=>支付宝,'2'=>微信,'3'=>本城支付);</php>
+            <php>$stat = array('1'=>充值,'2'=>购买合约人,'3'=>发红包,'4'=>领取红包,'5'=>退款,'6'=>购买小喇叭,'7'=>三方客转入,'8'=>三方客转出,'9'=>提现,'10'=>积分兑换);</php> -->
+            <tr>
+                <td>{$vo.w_id}</td>
+                <td>{$vo.name}</td>
+                <td>{$vo.price}</td>
+                <td>{$vo.time|date='Y-m-d H:i:s',###}</td>
+                <td>{$vo.success_time|date='Y-m-d H:i:s',###}</td>
+                <td>{$vo.order_sn}</td>
+                <td>{$vo.bank_card}</td>
+                <td>{$vo.bank_name}</td>
+                <td>{$vo.rate}</td>
+                <td>{$vo.formalities_fee}</td>
+                <td>{$states[$vo['state']]}</td>
+                <td>{$vo.reason}</td>
+                <td><a href="{:U('Withdraws/pass',array('w_id'=>$vo['w_id']))}">通过</a> |
+                <a href="javascript:;" class="nopass" data-w_id="{$vo['w_id']}">未通过</a>
+
+                </td>
+
+                
+            </tr>
+        </foreach>
+
+    </table>
+    <div class="pagination">{$page}</div>
+    </form>
+    <script src="./statics/js/common.js"></script>
+    <script src="./statics/js/layer/layer/layer.js"></script>
+    <script>
+    $('.nopass').click(function(){
+                 layer.open({
+                              type: 1,
+                              title: '未通过原因',
+                              closeBtn: 1,
+                              shadeClose: true,
+                              skin: 'yourclass',
+                              shade: 0,
+                              content: '<textarea rows="3" cols="20" class="texta"></textarea><br><button     style="margin-left: 33px;" class="tijiao">提交</button><button style="margin-left: 50px; class="quxiao">取消</button>'
+                            });
+    });
+      $('body').on('click','.tijiao',function(){
+         var w_id = $('.nopass').attr('data-w_id');
+         var texta = $('.texta').val();
+         $.ajax( {  
+                type : "POST",  
+                url : "/admin/Withdraws/nopass",  
+                data : {'w_id': w_id,
+                        'texta':texta,
+                                    },  
+                success : function(msg) { 
+                if(msg == 1){
+                    alert("success: " + '提交成功！'); 
+                    layer.closeAll();
+                    location.reload(); 
+                }else if(msg == 2){
+                    alert("不通过失败！");
+                    layer.closeAll();
+                }else if(msg == 3){
+                    alert("未收到参数！");
+                    layer.closeAll();
+                } 
+                }  
+      }); 
+       });     
+    </script>
+</div>
+</body>
+</html>

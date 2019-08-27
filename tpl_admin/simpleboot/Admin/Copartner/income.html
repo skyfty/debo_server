@@ -1,0 +1,46 @@
+<admintpl file="header" />
+</head>
+<body>
+<div class="wrap js-check-wrap">
+    <ul class="nav nav-tabs">
+        <li class="active"><a href="javascript:;">嘚啵币每日收益记录表</a></li>
+
+    </ul>
+    <form class="well form-search" method="get" action="__CONTROLLER__/index">
+        关键字：
+        <input type="text" name="content" style="width: 200px;" value="{$formget.keyword|default=''}" placeholder="请输入用户id或昵称...">
+        <input type="submit" class="btn btn-primary" value="搜索" />
+    </form>
+
+    <table class="table table-hover table-bordered table-list">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th >发布用户</th>
+            <th >结算后嘚啵币个数</th>
+            <th >结算前嘚啵币个数</th>
+            <th >当日收益个数</th>
+            <th >结算时间</th>
+        </tr>
+        </thead>
+
+
+        <foreach name="res" item="vo">
+            <tr>
+                <td>{$vo.id}</td>
+                <td>{$vo.user_nickname}</td>
+                <td>{$vo.debo_coins}</td>
+                <td>{$vo.pre_debo_coins}</td>
+                <td>{$vo.income}</td>
+                <td>{$vo.time|date='Y-m-d H:i:s',###}</td>
+
+            </tr>
+        </foreach>
+
+    </table>
+    <div class="pagination">{$page}</div>
+    </form>
+    <script src="./statics/js/common.js"></script>
+</div>
+</body>
+</html>
